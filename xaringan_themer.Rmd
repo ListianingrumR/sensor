@@ -3,7 +3,7 @@ title: "CASA0023 Remotely Sensing Cities and Environments"
 subtitle: "Remote Sensing Sensor: Sentinel"  
 author: 
   - "Rahmadita Listianingrum"
-date: '`r Sys.Date()`'
+date: "2023/01/27  (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -31,13 +31,19 @@ knitr::opts_chunk$set(
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 style_duo_accent(
-  primary_color = "#327CA7",
-  secondary_color = "#FFC94A",
+  primary_color = "#1C5174",
+  secondary_color = "#F08137",
   inverse_header_color = "#FFFFFF",
-  header_font_google = google_font("Roboto", "500"),
-  text_font_google   = google_font("Lato", "400", "300i"),
-  code_font_google   = google_font("IBM Plex Mono")
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
 )
+```
+
+```{r xaringan-extra, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_broadcast()
+xaringanExtra::use_panelset()
 ```
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
@@ -55,6 +61,39 @@ xaringanExtra::use_logo(
 ```{r, echo=FALSE}
 xaringanExtra::use_progress_bar(color = "#0051BA", location = "bottom")
 ```
+
+---
+class: center, middle
+
+# Sentinel
+
+Earth Observation mission from the Copernicus Programme
+
+---
+
+## Sentinel-1
+
+.panelset.sideways[
+.panel[.panel-name[
+History]
+
+Sentinel is the [Earth Observation](https://joint-research-centre.ec.europa.eu/scientific-activities-z/earth-observation_en) mission from the [Copernicus Programme](https://www.copernicus.eu/en/about-copernicus)
+]
+
+.panel[.panel-name[
+Bands]
+
+Sentinel has 12 bands
+
+.panel[.panel-name[
+Output]
+
+The output of this 
+
+]
+]
+
+---
 
 ## Typography
 
