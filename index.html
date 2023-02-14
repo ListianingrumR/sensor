@@ -45,7 +45,7 @@ class: center, middle, inverse, title-slide
 ### Rahmadita Listianingrum
 ]
 .date[
-### 2023/01/27 (updated: 2023-02-11)
+### 2023/01/27 (updated: 2023-02-12)
 ]
 
 ---
@@ -152,13 +152,62 @@ The output of this
 ]
 
 ---
-class: inverse center middle
 
-# Technology behind it
+## Copernicus future missions
 
----
+.panelset.sideways[
+.panel[.panel-name[**Sentinel-3**]
 
-Each sentinel has its own characteristics
+The main objective of the SENTINEL-3 mission is to measure sea surface topography, sea and land surface temperature, and ocean and land surface colour with high accuracy and reliability to support ocean forecasting systems, environmental monitoring and climate monitoring. The mission definition is driven by the need for continuity in provision of ERS, ENVISAT and SPOT vegetation data, with improvements in instrument performance and coverage.
+
+The SENTINEL-3 mission is jointly operated by ESA and EUMETSAT to deliver operational ocean and land observation services.
+
+The spacecraft carries four main instruments:
+- OLCI: Ocean and Land Colour Instrument
+- SLSTR: Sea and Land Surface Temperature Instrument
+- SRAL: SAR Radar Altimeter
+- MWR: Microwave Radiometer
+
+]
+
+.panel[.panel-name[**Sentinel-4**]
+
+The main objective of the Sentinel-4 mission is to monitor key air quality trace gases and aerosols over Europe in support of the Copernicus Atmosphere Monitoring Service (CAMS) at high spatial resolution and with a fast revisit time.
+
+The mission is part of the European Earth Observation Programme "Copernicus" which is run by the European Union together with the European Space Agency (ESA) in ccoperation with the European Environment Agency (EEA).
+
+The target species of the SENTINEL -4 mission include the key air quality parameters NO2 (nitrogen dioxide), O3 (ozon), SO2 (sulfur dioxide), HCHO (formaldehyde), CHOCHO (glyoxal), and aerosols. Complementarily, the Low Earth Orbiting (LEO) missions S5 and S5p will deliver the S4 target species and additionally CO (carbon monoxide), CH4 (methane), and stratospheric O3 (ozone)with global daily coverage for climate, air quality, and ozone/surface UV applications.
+
+]
+
+.panel[.panel-name[**Sentinel-5**]
+
+The Sentinel-5 mission is part of the European Earth Observation Programme "Copernicus" which is a coordinated and managed by the European Commission (EC). The space component of the Copernicus observation infrastructure is developed under the aegis of the European Space Agency (ESA).
+
+Sentinel-5 is focused on air quality and composition-climate interaction with the main data products being O3, NO2, SO2, HCHO, CHOCHO and aerosols. Additionally Sentinel-5 will also deliver quality parameters for CO, CH4, and stratospheric O3 with daily global coverage for climate, air quality, and ozone/surface UV applications.
+
+The Sentinel-5 mission consists of high resolution spectrometer system operating in the ultraviolet to shortwave infrared range with 7 different spectral bands: UV-1 (270-300nm), UV-2 (300-370nm), VIS (370-500nm), NIR-1 (685-710nm), NIR-2 (745-773nm), SWIR-1 (1590-1675nm) and SWIR-3 (2305-2385nm). The instrument will be carried on the MetOp-SG A satellite.
+
+]
+
+.panel[.panel-name[**Sentinel-5P**]
+
+The Copernicus Sentinel-5 Precursor mission is the first Copernicus mission dedicated to monitoring our atmosphere. Copernicus Sentinel-5P is the result of close collaboration between ESA, the European Commission, the Netherlands Space Office, industry, data users and scientists. The mission consists of one satellite carrying the TROPOspheric Monitoring Instrument (TROPOMI) instrument. The TROPOMI instrument was co-funded by ESA and The Netherlands.
+
+The main objective of the Copernicus Sentinel-5P mission is to perform atmospheric measurements with high spatio-temporal resolution, to be used for air quality, ozone &amp; UV radiation, and climate monitoring &amp; forecasting.
+
+The satellite was successfully launched on 13 October 2017 from the Plesetsk cosmodrome in Russia.
+
+]
+
+.panel[.panel-name[**Sentinel-6**]
+
+With global mean sea level rising because of climate change, Copernicus Sentinel-6 Michael Freilich is the next radar altimetry reference mission to extend the legacy of sea-surface height measurements, until at least 2030.
+
+Sentinel-6 is a collaborative Copernicus mission, implemented and co-funded by the European Commission, ESA, EUMETSAT and the USA, through NASA and the National Oceanic and Atmospheric Administration (NOAA).
+
+]
+]
 
 ---
 class: inverse center middle
@@ -168,15 +217,6 @@ class: inverse center middle
 ---
 
 Environmental issues
-
----
-class: inverse center middle
-
-# Copernicus future missions
-
----
-
-Sentinel-3 up to Sentinel- already in planned
 
 ---
 class: inverse center middle
@@ -534,8 +574,8 @@ exclude: false
 DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
 ```
 
-<div id="htmlwidget-f80bc060c175f7866c9c" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f80bc060c175f7866c9c">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9350fcedb41a948b8f4b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9350fcedb41a948b8f4b">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 layout: true
