@@ -27,7 +27,7 @@ style_duo_accent(
   inverse_header_color = "#1C5174",
   inverse_text_color = "#1C5174",
   header_font_google = google_font("Ubuntu"),
-  text_font_google   = google_font("Montserrat", "400", "400i"),
+  text_font_google   = google_font("Lato", "300", "300i"),
   code_font_google   = google_font("Fira Mono"),
   title_slide_background_image = "img/space.jpg"
 )
@@ -222,6 +222,19 @@ This technology is facinated compare to 10 years ago when I was graduated.
 ```{r results='asis', echo=FALSE}
 PrintBibliography(myBib)
 ```
+
+---
+class: inverse center middle
+
+# Thanks!
+
+Slides created via the R packages:
+
+[**xaringan**](https://github.com/yihui/xaringan) by<br>[**Yihui Xi**](https://yihui.org)<br>
+[**xaringanthemer**](https://github.com/gadenbuie/xaringanthemer) and
+[**xaringanExtra**](https://github.com/gadenbuie/xaringanExtra) by<br>[**Garrick Aden Buie**](https://www.garrickadenbuie.com)
+
+This slide is inspired by and adapted from<br>[**Dr Andrew Maclachlan's lecture**](https://andrewmaclachlan.github.io/CASA0023-lecture-2/#1)
 
 ---
 
@@ -541,16 +554,3 @@ layout: false
 <dt>Color</dt>
 <dd>Green</dd>
 </dl>
-
----
-class: inverse center middle
-
-# Thanks!
-
-Slides created via the R packages:
-
-[**xaringan**](https://github.com/yihui/xaringan) by<br>[**Yihui Xi**](https://yihui.org)<br>
-[**xaringanthemer**](https://github.com/gadenbuie/xaringanthemer) and
-[**xaringanExtra**](https://github.com/gadenbuie/xaringanExtra) by<br>[**Garrick Aden Buie**](https://www.garrickadenbuie.com)
-
-This slide is inspired by and adapted from<br>[**Dr Andrew Maclachlan's lecture**](https://andrewmaclachlan.github.io/CASA0023-lecture-2/#1)
