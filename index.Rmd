@@ -252,5 +252,3 @@ Slides created via the R packages:
 [**xaringanExtra**](https://github.com/gadenbuie/xaringanExtra) by<br>[**Garrick Aden Buie**](https://www.garrickadenbuie.com)
 
 This slide is inspired by and adapted from<br>[**Dr Andrew Maclachlan's lecture**](https://andrewmaclachlan.github.io/CASA0023-lecture-2/#1)
-
----
