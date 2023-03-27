@@ -92,7 +92,8 @@ Earth Observation mission from the Copernicus Programme
 ```{r echo=FALSE, out.width='50%', fig.align='center'}
 knitr::include_graphics('img/sentinel-2.png')
 ```
-Source: [ESA](https://sentinel.esa.int/web/sentinel/missions/sentinel-2)
+Source: [ESA](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2) `r Citep(myBib, "esaSentinel2MissionsSentinel")`
+
 ]
 
 .panel[.panel-name[**Overview**]
@@ -108,7 +109,7 @@ SENTINEL-2 is a high-resolution, multi-spectral imaging mission consisting of tw
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/sentinel-2-sat.png')
 ```
-Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)
+Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)`r Citep(myBib, "eadsEADSAstriumGmbH")`
 
 ]
 ]
@@ -128,7 +129,7 @@ The SENTINEL-2 satellite aims to provide high-resolution, multispectral images w
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/key-features.png')
 ```
-Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)
+Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)`r Citep(myBib, "eadsEADSAstriumGmbH")`
 
 ]
 ]
@@ -139,7 +140,7 @@ Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-g
 knitr::include_graphics('img/comparison.png')
 ```
 Comparison of the capabilities of Landsat, SPOT and Sentinel-2.<br>
-Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)
+Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)`r Citep(myBib, "eadsEADSAstriumGmbH")`
 
 ]
 
@@ -147,7 +148,7 @@ Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-g
 
 <style>
 div.remark-slide-content {
-  padding: 1em; /*default is 1em 4em*/
+  padding: 2em; /*default is 1em 4em*/
   font-size: .6em;
 }
 </style>
@@ -182,6 +183,7 @@ datatable(df,
 
 ```
 
+Source: [EOS Data Analytics](https://eos.com/find-satellite/sentinel-2/)`r Citep(myBib,"eosSentinel2SatelliteImagery2021")`
 ]
 ]
 
@@ -193,7 +195,27 @@ class: inverse center middle
 
 ---
 
-Environmental issues
+## Marine/Coastal Monitoring
+
+The study by Yustisi Lumban-Gaol, Ken Arroyo Ohori, and Ravi Peters, published in Marine Geodesy in 2022, extracted water depth information in coastal areas using multi-temporal Sentinel-2 satellite images and convolutional neural networks (CNNs). The study is motivated by the importance of water depth information for various applications, such as navigation safety, coastal zone management, and ecosystem conservation. `r Citep(myBib,"lumban-gaolExtractingCoastalWater2022")` used a CNN model architecture that consists of two convolutional layers followed by two fully connected layers. The input to the CNN model is a multi-temporal Sentinel-2 image, and the output is a water depth map. The authors also experimented with different input combinations of Sentinel-2 bands, temporal differences, and spatial filters to optimize the performance of the CNN model. The accuracy of the depth estimates achieved in this study is promising for applications such as navigation safety and coastal zone management. The authors suggest that further research can explore the application of the CNN models to other coastal areas with different water properties and bathymetric characteristics.
+
+.pull-left[
+
+```{r echo=FALSE, out.width='55%', fig.align='center'}
+knitr::include_graphics('img/result1.png')
+```
+Source: `r Citep(myBib,"lumban-gaolExtractingCoastalWater2022")`
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width='75%', fig.align='center'}
+knitr::include_graphics('img/error1.png')
+```
+Source: `r Citep(myBib,"lumban-gaolExtractingCoastalWater2022")`
+
+]
 
 ---
 class: inverse center middle
@@ -202,7 +224,13 @@ class: inverse center middle
 
 ---
 
-This technology is facinated compare to 10 years ago when I was graduated.
+## Reflection
+
+it is clear that Sentinel-2 is a powerful tool for various applications such as land cover mapping, vegetation monitoring, and water quality assessment. Its multi-spectral imaging capability and high spatial resolution provide valuable data for research and analysis. The study you mentioned on extracting coastal water depths using Sentinel-2 images is a great example of the satellite's potential for oceanographic applications.
+
+The study of Sentinel-2 application demonstrates how the use of convolutional neural networks (CNNs) can extract information on coastal water depths from Sentinel-2 images with high accuracy. This approach can provide a cost-effective and efficient way of collecting data on coastal bathymetry, which is essential for a variety of marine applications such as coastal zone management, fisheries management, and environmental monitoring.
+
+The capabilities of Sentinel-2 and the advancements in image processing techniques, such as CNNs, have allowed for new insights and opportunities in remote sensing applications. The increasing availability of high-quality satellite data has the potential to revolutionize our understanding of the natural world and inform policy and decision-making.
 
 ---
 
@@ -226,14 +254,3 @@ Slides created via the R packages:
 This slide is inspired by and adapted from<br>[**Dr Andrew Maclachlan's lecture**](https://andrewmaclachlan.github.io/CASA0023-lecture-2/#1)
 
 ---
-
-df <- structure(list(
-  Bands = c("Coastal aerosol", "Blue", "Green", "Red", "Vegetation Red Edge", "Vegetation Red Edge", "Vegetation Red Edge", "NIR", "Narrow NIR", "Water Vapour", "SWIR - Cirrus", "SWIR", "SWIR"),
-  Sensor = c("MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI"), 
-  Number = c("1","2","3","4","5","6","7","8","9","10","11","12","13"), 
-  "Sentinel-2A" = c("443.9","496.6","560.0","664.5","703.9","740.2","782.5","835.1","864.8","945.0","1373.5","1613.7","2202.4"),
-  "Number-Central Wavelength (nm)" = c("20","65","35","30","15","15","20","115","20","20","30","90","180"), 
-  "Sentinel-2B Bandwidth (nm)" = c("442.3","492.1","559","665","703.8","739.1","779.7","833","864","943.2","1376.9","1610.4","2185.7"),
-  "Central wavelength (nm)-2" = c("20","65","35","30","15","15","20","115","20","20","30","90","180"),
-  "Resolution (meters)-Bandwith (nm)-2" = c("60","10","10","10","20","20","20","10","20","60","60","20","20")),
-  sfc_columns = c("x", "y"), class = "data.frame", row.names = c(NA, -5L))
