@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Sentinel</title>
+    <title>Sentinel-2</title>
     <meta charset="utf-8" />
     <meta name="author" content="Rahmadita Listianingrum" />
     <script src="libs/header-attrs/header-attrs.js"></script>
@@ -36,7 +36,7 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# Sentinel
+# Sentinel-2
 ]
 .subtitle[
 ## The Remote Sensing Sensor
@@ -45,7 +45,7 @@ class: center, middle, inverse, title-slide
 ### Rahmadita Listianingrum
 ]
 .date[
-### 2023/01/27 (updated: 2023-02-20)
+### 2023/01/27
 ]
 
 ---
@@ -90,126 +90,83 @@ class: center middle
 ---
 class: inverse center middle
 
-# Sentinel programme
+# Summary
 
 Earth Observation mission from the Copernicus Programme
 
 ---
 
-## Sentinel-1
-
-.panelset.sideways[
-.panel[.panel-name[**History**]
-
-Sentinel is the [Earth Observation](https://joint-research-centre.ec.europa.eu/scientific-activities-z/earth-observation_en) mission from the [Copernicus Programme](https://www.copernicus.eu/en/about-copernicus).
-
-Copernicus is the most ambitious Earth Observation programme to date. The European Commission (EC) leads the Copernicus programme, implemented in partnership with the European Space Agency (ESA). The EC is responsible for defining user requirements and managing the Copernicus operational application services. ESA acts as the system architect for the Space Component and coordinates its development.
-
-The Sentinel-1 Mission acquires systematically and provides routinely a large volume of C-band SAR data to
-the Copernicus Marine, Land, Emergency, Climate Change, and Security services, as well as to national services and to the global scientific and commercial user community &lt;a name=cite-Torres2022COPERNICUSSN&gt;&lt;/a&gt;([Torres, Geudtner, Davidson, Bibby, Traver, Isabel, Hernandez, Ladureé, Poupaert, Cossu, Touveneau, and Graham, 2022](#bib-Torres2022COPERNICUSSN)).
-
-]
-
-.panel[.panel-name[**Bands**]
-
-The Sentinel-1 Mission is implemented through a pair of identical C-band SAR satellites comprising the current Sentinel-1A and -1B units, launched in 2014 and 2016, respectively ([Torres, Geudtner, Davidson et al., 2022](#bib-Torres2022COPERNICUSSN)).
-
-Sentinel-1 has 12 bands
-
-
-
-]
-
-.panel[.panel-name[**Output**]
-
-The near-term data continuity is ensured by the Sentinel-1C and -1D units. The launch of Sentinel-1C is foreseen for the end of 2022. Sentinel-1C/D is based upon the design of Sentinel-1A/B, but with further improvements, especially for the already remarkable radiometric stability and accuracy [2]. In addition, an Automated Identification System (AIS) payload will be implemented to support operational maritime surveillance, among others ([Torres, Geudtner, Davidson et al., 2022](#bib-Torres2022COPERNICUSSN)).
-
-]
-]
-
----
-
 ## Sentinel-2
 
-.panelset.sideways[
-.panel[.panel-name[**History**]
+.panelset[
+.panel[.panel-name[**Sentinel-2**]
+
+&lt;img src="img/sentinel-2.png" width="50%" style="display: block; margin: auto;" /&gt;
+Source: [ESA](https://sentinel.esa.int/web/sentinel/missions/sentinel-2)
+]
+
+.panel[.panel-name[**Overview**]
+
+.pull-left[
+
+SENTINEL-2 is a high-resolution, multi-spectral imaging mission consisting of two twin satellites in the same orbit with a high revisit frequency of 5 days at the Equator. The satellites carry an optical instrument payload that samples 13 spectral bands at different spatial resolutions, providing an orbital swath width of 290 km. The SENTINEL-2 mission continues the legacy of SPOT and LANDSAT and supports various services and applications offered by Copernicus, including land management, agriculture, forestry, disaster control, humanitarian relief operations, risk mapping, and security concerns.
+
+]
+
+.pull-right[
+
+&lt;img src="img/sentinel-2-sat.png" width="100%" style="display: block; margin: auto;" /&gt;
+Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)
+
+]
+]
+
+.panel[.panel-name[**Key-Features**]
+
+.pull-left[
 
 Sentinel is the [Earth Observation](https://joint-research-centre.ec.europa.eu/scientific-activities-z/earth-observation_en) mission from the [Copernicus Programme](https://www.copernicus.eu/en/about-copernicus) 
 
+The SENTINEL-2 satellite aims to provide high-resolution, multispectral images with a high revisit frequency on a global scale. Its objectives are outlined in the Mission Requirements Document and include providing continuity for multi-spectral imagery from SPOT and LANDSAT satellites, generating data for operational products like land-cover maps, and contributing to Copernicus themes like climate change and land monitoring. With its 13 spectral bands, 290 km swath width, and high revisit frequency, SENTINEL-2's MSI instrument is well-suited for a range of land studies and programmes, including land cover/change classification, atmospheric correction, and cloud/snow masks.
+
+]
+
+.pull-right[
+
+&lt;img src="img/key-features.png" width="100%" style="display: block; margin: auto;" /&gt;
+Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)
+
+]
+]
+
+.panel[.panel-name[**Comparison**]
+
+&lt;img src="img/comparison.png" width="55%" style="display: block; margin: auto;" /&gt;
+Comparison of the capabilities of Landsat, SPOT and Sentinel-2.&lt;br&gt;
+Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)
+
 ]
 
 .panel[.panel-name[**Bands**]
 
-Sentinel has 12 bands
+&lt;style&gt;
+div.remark-slide-content {
+  padding: 1em; /*default is 1em 4em*/
+  font-size: .6em;
+}
+&lt;/style&gt;
 
-]
 
-.panel[.panel-name[**Output**]
 
-The output of this 
 
-]
-]
-
----
-
-## Copernicus future missions
-
-.panelset.sideways[
-.panel[.panel-name[**Sentinel-3**]
-
-The main objective of the SENTINEL-3 mission is to measure sea surface topography, sea and land surface temperature, and ocean and land surface colour with high accuracy and reliability to support ocean forecasting systems, environmental monitoring and climate monitoring. The mission definition is driven by the need for continuity in provision of ERS, ENVISAT and SPOT vegetation data, with improvements in instrument performance and coverage.
-
-The SENTINEL-3 mission is jointly operated by ESA and EUMETSAT to deliver operational ocean and land observation services.
-
-The spacecraft carries four main instruments:
-- OLCI: Ocean and Land Colour Instrument
-- SLSTR: Sea and Land Surface Temperature Instrument
-- SRAL: SAR Radar Altimeter
-- MWR: Microwave Radiometer
-
-]
-
-.panel[.panel-name[**Sentinel-4**]
-
-The main objective of the Sentinel-4 mission is to monitor key air quality trace gases and aerosols over Europe in support of the Copernicus Atmosphere Monitoring Service (CAMS) at high spatial resolution and with a fast revisit time.
-
-The mission is part of the European Earth Observation Programme "Copernicus" which is run by the European Union together with the European Space Agency (ESA) in ccoperation with the European Environment Agency (EEA).
-
-The target species of the SENTINEL -4 mission include the key air quality parameters NO2 (nitrogen dioxide), O3 (ozon), SO2 (sulfur dioxide), HCHO (formaldehyde), CHOCHO (glyoxal), and aerosols. Complementarily, the Low Earth Orbiting (LEO) missions S5 and S5p will deliver the S4 target species and additionally CO (carbon monoxide), CH4 (methane), and stratospheric O3 (ozone)with global daily coverage for climate, air quality, and ozone/surface UV applications.
-
-]
-
-.panel[.panel-name[**Sentinel-5**]
-
-The Sentinel-5 mission is part of the European Earth Observation Programme "Copernicus" which is a coordinated and managed by the European Commission (EC). The space component of the Copernicus observation infrastructure is developed under the aegis of the European Space Agency (ESA).
-
-Sentinel-5 is focused on air quality and composition-climate interaction with the main data products being O3, NO2, SO2, HCHO, CHOCHO and aerosols. Additionally Sentinel-5 will also deliver quality parameters for CO, CH4, and stratospheric O3 with daily global coverage for climate, air quality, and ozone/surface UV applications.
-
-The Sentinel-5 mission consists of high resolution spectrometer system operating in the ultraviolet to shortwave infrared range with 7 different spectral bands: UV-1 (270-300nm), UV-2 (300-370nm), VIS (370-500nm), NIR-1 (685-710nm), NIR-2 (745-773nm), SWIR-1 (1590-1675nm) and SWIR-3 (2305-2385nm). The instrument will be carried on the MetOp-SG A satellite.
-
-]
-
-.panel[.panel-name[**Sentinel-5P**]
-
-The Copernicus Sentinel-5 Precursor mission is the first Copernicus mission dedicated to monitoring our atmosphere. Copernicus Sentinel-5P is the result of close collaboration between ESA, the European Commission, the Netherlands Space Office, industry, data users and scientists. The mission consists of one satellite carrying the TROPOspheric Monitoring Instrument (TROPOMI) instrument. The TROPOMI instrument was co-funded by ESA and The Netherlands.
-
-The main objective of the Copernicus Sentinel-5P mission is to perform atmospheric measurements with high spatio-temporal resolution, to be used for air quality, ozone &amp; UV radiation, and climate monitoring &amp; forecasting.
-
-The satellite was successfully launched on 13 October 2017 from the Plesetsk cosmodrome in Russia.
-
-]
-
-.panel[.panel-name[**Sentinel-6**]
-
-With global mean sea level rising because of climate change, Copernicus Sentinel-6 Michael Freilich is the next radar altimetry reference mission to extend the legacy of sea-surface height measurements, until at least 2030.
-
-Sentinel-6 is a collaborative Copernicus mission, implemented and co-funded by the European Commission, ESA, EUMETSAT and the USA, through NASA and the National Oceanic and Atmospheric Administration (NOAA).
+<div id="htmlwidget-a10e9b983ea5e5eeb9fd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a10e9b983ea5e5eeb9fd">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13"],["Coastal aerosol","Blue","Green","Red","Vegetation Red Edge","Vegetation Red Edge","Vegetation Red Edge","NIR","Narrow NIR","Water Vapour","SWIR - Cirrus","SWIR","SWIR"],["MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI"],[1,2,3,4,5,6,7,8,9,10,11,12,13],[443.9,496.6,560,664.5,703.9,740.2,782.5,835.1,864.8,945,1373.5,1613.7,2202.4],[20,65,35,30,15,15,20,115,20,20,30,90,180],[442.3,492.1,559,665,703.8,739.1,779.7,833,864,943.2,1376.9,1610.4,2185.7],[20,65,35,30,15,15,20,115,20,20,30,90,180],[60,10,10,10,20,20,20,10,20,60,60,20,20]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Bands<\/th>\n      <th>Sensor<\/th>\n      <th>Number<\/th>\n      <th>Sentinel-2A<\/th>\n      <th>Number-Central Wavelength (nm)<\/th>\n      <th>Sentinel-2B Bandwidth (nm)<\/th>\n      <th>Central wavelength (nm)-2<\/th>\n      <th>Resolution (meters)-Bandwith (nm)-2<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[3,4,5,6,7,8]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'background':'white','angle':'-90','background-size':'98% 88%','background-repeat':'no-repeat','background-position':'center'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background':'white','angle':'-90','background-size':'98% 88%','background-repeat':'no-repeat','background-position':'center'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'background':'white','angle':'-90','background-size':'98% 88%','background-repeat':'no-repeat','background-position':'center'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'background':'white','angle':'-90','background-size':'98% 88%','background-repeat':'no-repeat','background-position':'center'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'background':'white','angle':'-90','background-size':'98% 88%','background-repeat':'no-repeat','background-position':'center'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background':'white','angle':'-90','background-size':'98% 88%','background-repeat':'no-repeat','background-position':'center'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background':'white','angle':'-90','background-size':'98% 88%','background-repeat':'no-repeat','background-position':'center'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'background':'white','angle':'-90','background-size':'98% 88%','background-repeat':'no-repeat','background-position':'center'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 
 ]
 ]
 
 ---
+
 class: inverse center middle
 
 # Application
@@ -231,11 +188,12 @@ This technology is facinated compare to 10 years ago when I was graduated.
 
 # Reference
 
-&lt;a name=bib-Torres2022COPERNICUSSN&gt;&lt;/a&gt;[Torres, R., D. Geudtner, M.
-Davidson, et al.](#cite-Torres2022COPERNICUSSN) (2022). "COPERNICUS
-SENTINEL-1 NEXT GENERATION MISSION: ENHANCED C-BAND DATA CONTINUITY".
-In: _IGARSS 2022 - 2022 IEEE International Geoscience and Remote
-Sensing Symposium_, pp. 4717-4719.
+
+```
+## You haven't cited any references in this bibliography yet.
+```
+
+NULL
 
 ---
 class: inverse center middle
@@ -252,476 +210,16 @@ This slide is inspired by and adapted from&lt;br&gt;[**Dr Andrew Maclachlan's le
 
 ---
 
-## Typography
-
-Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
-
-[Link to another slide](#colors).
-
-### Lorem Ipsum
-
-Dolor imperdiet nostra sapien scelerisque praesent curae metus facilisis dignissim tortor. 
-Lacinia neque mollis nascetur neque urna velit bibendum. 
-Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
-
-- Dolor cubilia nostra nunc sodales
-
-- Consectetur aliquet mauris blandit
-
-- Ipsum dis nec porttitor urna sed
-
----
-name: colors
-
-## Colors
-
-.left-column[
-Text color
-
-[Link Color](#3)
-
-**Bold Color**
-
-_Italic Color_
-
-`Inline Code`
-]
-
-.right-column[
-Lorem ipsum dolor sit amet, [consectetur adipiscing elit (link)](#3), 
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Erat nam at lectus urna.
-Pellentesque elit ullamcorper **dignissim cras tincidunt (bold)** lobortis feugiat. 
-_Eros donec ac odio tempor_ orci dapibus ultrices. 
-Id porta nibh venenatis cras sed felis eget velit aliquet.
-Aliquam id diam maecenas ultricies mi.
-Enim sit amet 
-`code_color("inline")`
-venenatis urna cursus eget nunc scelerisque viverra.
-]
-
----
-
-# Big Topic or Inverse Slides `#`
-
-## Slide Headings `##`
-
-### Sub-slide Headings `###`
-
-#### Bold Call-Out `####`
-
-This is a normal paragraph text. Only use header levels 1-4.
-
-##### Possible, but not recommended `#####`
-
-###### Definitely don't use h6 `######`
-
----
-
-# Left-Column Headings
-
-.left-column[
-## First
-
-## Second
-
-## Third
-]
-
-.right-column[
-Dolor quis aptent mus a dictum ultricies egestas.
-
-Amet egestas neque tempor fermentum proin massa!
-
-Dolor elementum fermentum pharetra lectus arcu pulvinar.
-]
-
----
-class: inverse center middle
-
-# Topic Changing Interstitial
-
---
-
-```
-class: inverse center middle
-```
-
----
-layout: true
-
-## Blocks
-
----
-
-### Blockquote
-
-&gt; This is a blockquote following a header.
-&gt;
-&gt; When something is important enough, you do it even if the odds are not in your favor.
-
----
-
-### Code Blocks
-
-#### R Code
-
-
-```r
-ggplot(gapminder) +
-  aes(x = gdpPercap, y = lifeExp, size = pop, color = country) +
-  geom_point() +
-  facet_wrap(~year)
-```
-
-#### JavaScript
-
-```js
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
----
-
-### More R Code
-
-
-```r
-dplyr::starwars %&gt;% dplyr::slice_sample(n = 4)
-```
-
----
-
-
-```r
-cli::cli_alert_success("It worked!")
-```
-
-```
-## ✔ It worked!
-```
-
---
-
-
-```r
-message("Just a friendly message")
-```
-
-```
-## Just a friendly message
-```
-
---
-
-
-```r
-warning("This could be bad...")
-```
-
-```
-## Warning: This could be bad...
-```
-
---
-
-
-```r
-stop("I hope you're sitting down for this")
-```
-
-```
-## Error in eval(expr, envir, enclos): I hope you're sitting down for this
-```
-
-
----
-layout: true
-
-## Tables
-
----
-exclude: false
-
-
-```r
-tibble::as_tibble(mtcars)
-```
-
-```
-## # A tibble: 32 × 11
-##      mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  21       6  160    110  3.9   2.62  16.5     0     1     4     4
-##  2  21       6  160    110  3.9   2.88  17.0     0     1     4     4
-##  3  22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
-##  4  21.4     6  258    110  3.08  3.22  19.4     1     0     3     1
-##  5  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2
-##  6  18.1     6  225    105  2.76  3.46  20.2     1     0     3     1
-##  7  14.3     8  360    245  3.21  3.57  15.8     0     0     3     4
-##  8  24.4     4  147.    62  3.69  3.19  20       1     0     4     2
-##  9  22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2
-## 10  19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4
-## # … with 22 more rows
-```
-
----
-
-
-```r
-knitr::kable(head(mtcars), format = 'html')
-```
-
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; mpg &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; cyl &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; disp &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; hp &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; drat &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; wt &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; qsec &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; vs &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; am &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; gear &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; carb &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.620 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 16.46 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 Wag &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.875 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Datsun 710 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 22.8 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 108 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 93 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.85 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.320 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.61 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Hornet 4 Drive &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 258 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.08 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.215 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 19.44 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Hornet Sportabout &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 360 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 175 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.15 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.440 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Valiant &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 225 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.76 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.460 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 20.22 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-exclude: false
-
-
-```r
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
-```
-
-<div id="htmlwidget-6d6721041cba62a6c1cb" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6d6721041cba62a6c1cb">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
-
----
-layout: true
-
-## Lists
-
----
-
-.pull-left[
-#### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-]
-
-.pull-right[
-
-#### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-]
-
----
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
----
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-
----
-layout: true
-
-## Plots
-
----
-
-
-```r
-library(ggplot2)
-(g &lt;- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
-```
-
-![](index_files/figure-html/plot-example-1.png)&lt;!-- --&gt;
-
----
-
-
-```r
-g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
-  ggtitle("A Plot About Cars")
-```
-
-.footnote[Requires `{showtext}`]
-
----
-layout: false
-
-## Square image
-
-&lt;center&gt;&lt;img src="https://octodex.github.com/images/labtocat.png" alt="GithHub Octocat" height="400px" /&gt;&lt;/center&gt;
-
-.footnote[GitHub Octocat]
-
----
-
-### Wide image
-
-![A wide image with a diagram of branching in git.](https://docs.github.com/assets/images/help/repository/branching.png)
-
-.footnote[Wide images scale to 100% slide width]
-
----
-
-## Two images
-
-.pull-left[
-![A GitHub Octocat, style "mother hubber"](https://octodex.github.com/images/motherhubbertocat.png)
-]
-
-.pull-right[
-![A GitHub Octocat, style "dinotcat"](https://octodex.github.com/images/dinotocat.png)
-]
-
----
-
-### Definition lists can be used with HTML syntax.
-
-&lt;dl&gt;
-&lt;dt&gt;Name&lt;/dt&gt;
-&lt;dd&gt;Godzilla&lt;/dd&gt;
-&lt;dt&gt;Born&lt;/dt&gt;
-&lt;dd&gt;1952&lt;/dd&gt;
-&lt;dt&gt;Birthplace&lt;/dt&gt;
-&lt;dd&gt;Japan&lt;/dd&gt;
-&lt;dt&gt;Color&lt;/dt&gt;
-&lt;dd&gt;Green&lt;/dd&gt;
-&lt;/dl&gt;
+df &lt;- structure(list(
+  Bands = c("Coastal aerosol", "Blue", "Green", "Red", "Vegetation Red Edge", "Vegetation Red Edge", "Vegetation Red Edge", "NIR", "Narrow NIR", "Water Vapour", "SWIR - Cirrus", "SWIR", "SWIR"),
+  Sensor = c("MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI"), 
+  Number = c("1","2","3","4","5","6","7","8","9","10","11","12","13"), 
+  "Sentinel-2A" = c("443.9","496.6","560.0","664.5","703.9","740.2","782.5","835.1","864.8","945.0","1373.5","1613.7","2202.4"),
+  "Number-Central Wavelength (nm)" = c("20","65","35","30","15","15","20","115","20","20","30","90","180"), 
+  "Sentinel-2B Bandwidth (nm)" = c("442.3","492.1","559","665","703.8","739.1","779.7","833","864","943.2","1376.9","1610.4","2185.7"),
+  "Central wavelength (nm)-2" = c("20","65","35","30","15","15","20","115","20","20","30","90","180"),
+  "Resolution (meters)-Bandwith (nm)-2" = c("60","10","10","10","20","20","20","10","20","60","60","20","20")),
+  sfc_columns = c("x", "y"), class = "data.frame", row.names = c(NA, -5L))
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

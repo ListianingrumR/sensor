@@ -1,8 +1,8 @@
 ---
-title: "Sentinel"
+title: "Sentinel-2"
 subtitle: "The Remote Sensing Sensor"  
 author: "Rahmadita Listianingrum"
-date: "2023/01/27 (updated: `r Sys.Date()`)"
+date: "2023/01/27"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -78,126 +78,115 @@ library(fontawesome)
 ---
 class: inverse center middle
 
-# Sentinel programme
+# Summary
 
 Earth Observation mission from the Copernicus Programme
 
 ---
 
-## Sentinel-1
-
-.panelset.sideways[
-.panel[.panel-name[**History**]
-
-Sentinel is the [Earth Observation](https://joint-research-centre.ec.europa.eu/scientific-activities-z/earth-observation_en) mission from the [Copernicus Programme](https://www.copernicus.eu/en/about-copernicus).
-
-Copernicus is the most ambitious Earth Observation programme to date. The European Commission (EC) leads the Copernicus programme, implemented in partnership with the European Space Agency (ESA). The EC is responsible for defining user requirements and managing the Copernicus operational application services. ESA acts as the system architect for the Space Component and coordinates its development.
-
-The Sentinel-1 Mission acquires systematically and provides routinely a large volume of C-band SAR data to
-the Copernicus Marine, Land, Emergency, Climate Change, and Security services, as well as to national services and to the global scientific and commercial user community `r Citep(myBib, "Torres2022COPERNICUSSN")`.
-
-]
-
-.panel[.panel-name[**Bands**]
-
-The Sentinel-1 Mission is implemented through a pair of identical C-band SAR satellites comprising the current Sentinel-1A and -1B units, launched in 2014 and 2016, respectively `r Citep(myBib, "Torres2022COPERNICUSSN")`.
-
-Sentinel-1 has 12 bands
-
-
-
-]
-
-.panel[.panel-name[**Output**]
-
-The near-term data continuity is ensured by the Sentinel-1C and -1D units. The launch of Sentinel-1C is foreseen for the end of 2022. Sentinel-1C/D is based upon the design of Sentinel-1A/B, but with further improvements, especially for the already remarkable radiometric stability and accuracy [2]. In addition, an Automated Identification System (AIS) payload will be implemented to support operational maritime surveillance, among others `r Citep(myBib, "Torres2022COPERNICUSSN")`.
-
-]
-]
-
----
-
 ## Sentinel-2
 
-.panelset.sideways[
-.panel[.panel-name[**History**]
+.panelset[
+.panel[.panel-name[**Sentinel-2**]
+
+```{r echo=FALSE, out.width='50%', fig.align='center'}
+knitr::include_graphics('img/sentinel-2.png')
+```
+Source: [ESA](https://sentinel.esa.int/web/sentinel/missions/sentinel-2)
+]
+
+.panel[.panel-name[**Overview**]
+
+.pull-left[
+
+SENTINEL-2 is a high-resolution, multi-spectral imaging mission consisting of two twin satellites in the same orbit with a high revisit frequency of 5 days at the Equator. The satellites carry an optical instrument payload that samples 13 spectral bands at different spatial resolutions, providing an orbital swath width of 290 km. The SENTINEL-2 mission continues the legacy of SPOT and LANDSAT and supports various services and applications offered by Copernicus, including land management, agriculture, forestry, disaster control, humanitarian relief operations, risk mapping, and security concerns.
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/sentinel-2-sat.png')
+```
+Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)
+
+]
+]
+
+.panel[.panel-name[**Key-Features**]
+
+.pull-left[
 
 Sentinel is the [Earth Observation](https://joint-research-centre.ec.europa.eu/scientific-activities-z/earth-observation_en) mission from the [Copernicus Programme](https://www.copernicus.eu/en/about-copernicus) `r Citep(myBib, "Sentinel2MissionsSentinel")`
 
+The SENTINEL-2 satellite aims to provide high-resolution, multispectral images with a high revisit frequency on a global scale. Its objectives are outlined in the Mission Requirements Document and include providing continuity for multi-spectral imagery from SPOT and LANDSAT satellites, generating data for operational products like land-cover maps, and contributing to Copernicus themes like climate change and land monitoring. With its 13 spectral bands, 290 km swath width, and high revisit frequency, SENTINEL-2's MSI instrument is well-suited for a range of land studies and programmes, including land cover/change classification, atmospheric correction, and cloud/snow masks.
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/key-features.png')
+```
+Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)
+
+]
+]
+
+.panel[.panel-name[**Comparison**]
+
+```{r echo=FALSE, out.width='55%', fig.align='center'}
+knitr::include_graphics('img/comparison.png')
+```
+Comparison of the capabilities of Landsat, SPOT and Sentinel-2.<br>
+Source: [Astrium GmBH, Germany](https://artes.esa.int/contractors/eads-astrium-gmbh)
+
 ]
 
 .panel[.panel-name[**Bands**]
 
-Sentinel has 12 bands
+<style>
+div.remark-slide-content {
+  padding: 1em; /*default is 1em 4em*/
+  font-size: .6em;
+}
+</style>
 
-]
+```{r doasyouretold,echo=F,include=F}
 
-.panel[.panel-name[**Output**]
+library(tidyverse)
+library(DT)
 
-The output of this 
+df <- structure(list(
+  Bands = c("Coastal aerosol", "Blue", "Green", "Red", "Vegetation Red Edge", "Vegetation Red Edge", "Vegetation Red Edge", "NIR", "Narrow NIR", "Water Vapour", "SWIR - Cirrus", "SWIR", "SWIR"),
+  Sensor = c("MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI"), 
+  Number = c(1,2,3,4,5,6,7,8,9,10,11,12,13), 
+  "Sentinel-2A" = c(443.9,496.6,560.0,664.5,703.9,740.2,782.5,835.1,864.8,945.0,1373.5,1613.7,2202.4),
+  "Number-Central Wavelength (nm)" = c(20,65,35,30,15,15,20,115,20,20,30,90,180), 
+  "Sentinel-2B Bandwidth (nm)" = c(442.3,492.1,559,665,703.8,739.1,779.7,833,864,943.2,1376.9,1610.4,2185.7),
+  "Central wavelength (nm)-2" = c(20,65,35,30,15,15,20,115,20,20,30,90,180),
+  "Resolution (meters)-Bandwith (nm)-2" = c(60,10,10,10,20,20,20,10,20,60,60,20,20)),
+  sfc_columns = c("x", "y"), class = "data.frame", row.names = c(NA, -13L))
 
-]
-]
+```
 
----
 
-## Copernicus future missions
+```{r gimmeNow,echo=F}
 
-.panelset.sideways[
-.panel[.panel-name[**Sentinel-3**]
+datatable(df,
+         # style = "font-size: 75%; width: 75%")  %>% <- this doesn't go here...
+         ) %>% 
+  formatStyle(names(df), background = 'white', angle = -90,
+              backgroundSize = '98% 88%', backgroundRepeat = 'no-repeat',
+              backgroundPosition = 'center')
 
-The main objective of the SENTINEL-3 mission is to measure sea surface topography, sea and land surface temperature, and ocean and land surface colour with high accuracy and reliability to support ocean forecasting systems, environmental monitoring and climate monitoring. The mission definition is driven by the need for continuity in provision of ERS, ENVISAT and SPOT vegetation data, with improvements in instrument performance and coverage.
-
-The SENTINEL-3 mission is jointly operated by ESA and EUMETSAT to deliver operational ocean and land observation services.
-
-The spacecraft carries four main instruments:
-- OLCI: Ocean and Land Colour Instrument
-- SLSTR: Sea and Land Surface Temperature Instrument
-- SRAL: SAR Radar Altimeter
-- MWR: Microwave Radiometer
-
-]
-
-.panel[.panel-name[**Sentinel-4**]
-
-The main objective of the Sentinel-4 mission is to monitor key air quality trace gases and aerosols over Europe in support of the Copernicus Atmosphere Monitoring Service (CAMS) at high spatial resolution and with a fast revisit time.
-
-The mission is part of the European Earth Observation Programme "Copernicus" which is run by the European Union together with the European Space Agency (ESA) in ccoperation with the European Environment Agency (EEA).
-
-The target species of the SENTINEL -4 mission include the key air quality parameters NO2 (nitrogen dioxide), O3 (ozon), SO2 (sulfur dioxide), HCHO (formaldehyde), CHOCHO (glyoxal), and aerosols. Complementarily, the Low Earth Orbiting (LEO) missions S5 and S5p will deliver the S4 target species and additionally CO (carbon monoxide), CH4 (methane), and stratospheric O3 (ozone)with global daily coverage for climate, air quality, and ozone/surface UV applications.
-
-]
-
-.panel[.panel-name[**Sentinel-5**]
-
-The Sentinel-5 mission is part of the European Earth Observation Programme "Copernicus" which is a coordinated and managed by the European Commission (EC). The space component of the Copernicus observation infrastructure is developed under the aegis of the European Space Agency (ESA).
-
-Sentinel-5 is focused on air quality and composition-climate interaction with the main data products being O3, NO2, SO2, HCHO, CHOCHO and aerosols. Additionally Sentinel-5 will also deliver quality parameters for CO, CH4, and stratospheric O3 with daily global coverage for climate, air quality, and ozone/surface UV applications.
-
-The Sentinel-5 mission consists of high resolution spectrometer system operating in the ultraviolet to shortwave infrared range with 7 different spectral bands: UV-1 (270-300nm), UV-2 (300-370nm), VIS (370-500nm), NIR-1 (685-710nm), NIR-2 (745-773nm), SWIR-1 (1590-1675nm) and SWIR-3 (2305-2385nm). The instrument will be carried on the MetOp-SG A satellite.
-
-]
-
-.panel[.panel-name[**Sentinel-5P**]
-
-The Copernicus Sentinel-5 Precursor mission is the first Copernicus mission dedicated to monitoring our atmosphere. Copernicus Sentinel-5P is the result of close collaboration between ESA, the European Commission, the Netherlands Space Office, industry, data users and scientists. The mission consists of one satellite carrying the TROPOspheric Monitoring Instrument (TROPOMI) instrument. The TROPOMI instrument was co-funded by ESA and The Netherlands.
-
-The main objective of the Copernicus Sentinel-5P mission is to perform atmospheric measurements with high spatio-temporal resolution, to be used for air quality, ozone & UV radiation, and climate monitoring & forecasting.
-
-The satellite was successfully launched on 13 October 2017 from the Plesetsk cosmodrome in Russia.
-
-]
-
-.panel[.panel-name[**Sentinel-6**]
-
-With global mean sea level rising because of climate change, Copernicus Sentinel-6 Michael Freilich is the next radar altimetry reference mission to extend the legacy of sea-surface height measurements, until at least 2030.
-
-Sentinel-6 is a collaborative Copernicus mission, implemented and co-funded by the European Commission, ESA, EUMETSAT and the USA, through NASA and the National Oceanic and Atmospheric Administration (NOAA).
+```
 
 ]
 ]
 
 ---
+
 class: inverse center middle
 
 # Application
@@ -238,319 +227,13 @@ This slide is inspired by and adapted from<br>[**Dr Andrew Maclachlan's lecture*
 
 ---
 
-## Typography
-
-Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
-
-[Link to another slide](#colors).
-
-### Lorem Ipsum
-
-Dolor imperdiet nostra sapien scelerisque praesent curae metus facilisis dignissim tortor. 
-Lacinia neque mollis nascetur neque urna velit bibendum. 
-Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
-
-- Dolor cubilia nostra nunc sodales
-
-- Consectetur aliquet mauris blandit
-
-- Ipsum dis nec porttitor urna sed
-
----
-name: colors
-
-## Colors
-
-.left-column[
-Text color
-
-[Link Color](#3)
-
-**Bold Color**
-
-_Italic Color_
-
-`Inline Code`
-]
-
-.right-column[
-Lorem ipsum dolor sit amet, [consectetur adipiscing elit (link)](#3), 
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Erat nam at lectus urna.
-Pellentesque elit ullamcorper **dignissim cras tincidunt (bold)** lobortis feugiat. 
-_Eros donec ac odio tempor_ orci dapibus ultrices. 
-Id porta nibh venenatis cras sed felis eget velit aliquet.
-Aliquam id diam maecenas ultricies mi.
-Enim sit amet 
-`code_color("inline")`
-venenatis urna cursus eget nunc scelerisque viverra.
-]
-
----
-
-# Big Topic or Inverse Slides `#`
-
-## Slide Headings `##`
-
-### Sub-slide Headings `###`
-
-#### Bold Call-Out `####`
-
-This is a normal paragraph text. Only use header levels 1-4.
-
-##### Possible, but not recommended `#####`
-
-###### Definitely don't use h6 `######`
-
----
-
-# Left-Column Headings
-
-.left-column[
-## First
-
-## Second
-
-## Third
-]
-
-.right-column[
-Dolor quis aptent mus a dictum ultricies egestas.
-
-Amet egestas neque tempor fermentum proin massa!
-
-Dolor elementum fermentum pharetra lectus arcu pulvinar.
-]
-
----
-class: inverse center middle
-
-# Topic Changing Interstitial
-
---
-
-```
-class: inverse center middle
-```
-
----
-layout: true
-
-## Blocks
-
----
-
-### Blockquote
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
----
-
-### Code Blocks
-
-#### R Code
-
-```{r eval=FALSE}
-ggplot(gapminder) +
-  aes(x = gdpPercap, y = lifeExp, size = pop, color = country) +
-  geom_point() +
-  facet_wrap(~year)
-```
-
-#### JavaScript
-
-```js
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
----
-
-### More R Code
-
-```{r eval=FALSE}
-dplyr::starwars %>% dplyr::slice_sample(n = 4)
-```
-
----
-
-```{r message=TRUE, eval=requireNamespace("cli", quietly = TRUE)}
-cli::cli_alert_success("It worked!")
-```
-
---
-
-```{r message=TRUE}
-message("Just a friendly message")
-```
-
---
-
-```{r warning=TRUE}
-warning("This could be bad...")
-```
-
---
-
-```{r error=TRUE}
-stop("I hope you're sitting down for this")
-```
-
-
----
-layout: true
-
-## Tables
-
----
-exclude: `r if (requireNamespace("tibble", quietly=TRUE)) "false" else "true"`
-
-```{r eval=requireNamespace("tibble", quietly=TRUE)}
-tibble::as_tibble(mtcars)
-```
-
----
-
-```{r}
-knitr::kable(head(mtcars), format = 'html')
-```
-
----
-exclude: `r if (requireNamespace("DT", quietly=TRUE)) "false" else "true"`
-
-```{r eval=requireNamespace("DT", quietly=TRUE)}
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
-```
-
----
-layout: true
-
-## Lists
-
----
-
-.pull-left[
-#### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-]
-
-.pull-right[
-
-#### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-]
-
----
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
----
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-
----
-layout: true
-
-## Plots
-
----
-
-```{r plot-example, eval=requireNamespace("ggplot2", quietly=TRUE)}
-library(ggplot2)
-(g <- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
-```
-
----
-
-```{r plot-example-themed, eval=requireNamespace("showtext", quietly=TRUE) && requireNamespace("ggplot2", quietly=TRUE)}
-g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
-  ggtitle("A Plot About Cars")
-```
-
-.footnote[Requires `{showtext}`]
-
----
-layout: false
-
-## Square image
-
-<center><img src="https://octodex.github.com/images/labtocat.png" alt="GithHub Octocat" height="400px" /></center>
-
-.footnote[GitHub Octocat]
-
----
-
-### Wide image
-
-![A wide image with a diagram of branching in git.](https://docs.github.com/assets/images/help/repository/branching.png)
-
-.footnote[Wide images scale to 100% slide width]
-
----
-
-## Two images
-
-.pull-left[
-![A GitHub Octocat, style "mother hubber"](https://octodex.github.com/images/motherhubbertocat.png)
-]
-
-.pull-right[
-![A GitHub Octocat, style "dinotcat"](https://octodex.github.com/images/dinotocat.png)
-]
-
----
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+df <- structure(list(
+  Bands = c("Coastal aerosol", "Blue", "Green", "Red", "Vegetation Red Edge", "Vegetation Red Edge", "Vegetation Red Edge", "NIR", "Narrow NIR", "Water Vapour", "SWIR - Cirrus", "SWIR", "SWIR"),
+  Sensor = c("MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI","MSI"), 
+  Number = c("1","2","3","4","5","6","7","8","9","10","11","12","13"), 
+  "Sentinel-2A" = c("443.9","496.6","560.0","664.5","703.9","740.2","782.5","835.1","864.8","945.0","1373.5","1613.7","2202.4"),
+  "Number-Central Wavelength (nm)" = c("20","65","35","30","15","15","20","115","20","20","30","90","180"), 
+  "Sentinel-2B Bandwidth (nm)" = c("442.3","492.1","559","665","703.8","739.1","779.7","833","864","943.2","1376.9","1610.4","2185.7"),
+  "Central wavelength (nm)-2" = c("20","65","35","30","15","15","20","115","20","20","30","90","180"),
+  "Resolution (meters)-Bandwith (nm)-2" = c("60","10","10","10","20","20","20","10","20","60","60","20","20")),
+  sfc_columns = c("x", "y"), class = "data.frame", row.names = c(NA, -5L))
